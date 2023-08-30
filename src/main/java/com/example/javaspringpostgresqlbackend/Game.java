@@ -18,13 +18,13 @@ public class Game {
   private Long id;
 
   private String name;
-  private Date dateAdded;
+  private Date date_added;
 
   Game() {}
 
-  Game(String name, Date dateAdded) {
+  Game(String name, Date date_added) {
     this.name = name;
-    this.dateAdded = dateAdded;
+    this.date_added = date_added;
   }
 
   public Long getId() {
@@ -35,8 +35,8 @@ public class Game {
     return this.name;
   }
 
-  public Date getDateAdded() {
-    return this.dateAdded;
+  public Date getdate_added() {
+    return this.date_added;
   }
 
   public void setId(Long id) {
@@ -47,8 +47,8 @@ public class Game {
     this.name = name;
   }
 
-  public void setDateAdded(Date dateAdded) {
-    this.dateAdded = dateAdded;
+  public void setdate_added(Date date_added) {
+    this.date_added = date_added;
   }
 
   @Override
@@ -58,16 +58,16 @@ public class Game {
     if (!(o instanceof Game))
       return false;
     Game game = (Game) o;
-    return Objects.equals(this.id, game.id) && Objects.equals(this.name, game.name) && Objects.equals(this.dateAdded, game.dateAdded);
+    return Objects.equals(this.id, game.id) && Objects.equals(this.name, game.name) && Objects.equals(this.date_added, game.date_added);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(this.id, this.name, this.dateAdded);
+    return Objects.hash(this.id, this.name, this.date_added);
   }
 
   @Override 
   public String toString() {
-    return "Game{" + "id=" + this.id + ", name='" + this.name + '\'' + ", dateAdded='" + this.dateAdded + '\'' + '}';
+    return "Game{" + "id=" + this.id + ", name='" + this.name + '\'' + ", date_added='" + this.date_added + '\'' + '}';
   }
 }

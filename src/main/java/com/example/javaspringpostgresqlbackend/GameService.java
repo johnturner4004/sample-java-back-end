@@ -32,7 +32,7 @@ public class GameService {
     if (game.isPresent()) {
       Game existingGame = game.get();
       existingGame.setName(gameDetails.getName());
-      existingGame.setDateAdded(gameDetails.getDateAdded());
+      existingGame.setdate_added(gameDetails.getdate_added());
       return gameRepository.save(existingGame);
     }
     return null;
